@@ -12,5 +12,7 @@ class CountryEntity(
     @Column(name = "name")
     var name: String = "",
     @Column(name = "population")
-    var population: Int = 0
+    var population: Int = 0,
+    @OneToMany(mappedBy = "country")
+    var cities: List<CityEntity> = ArrayList()
 )
